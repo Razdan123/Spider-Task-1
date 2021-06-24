@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="hicalender.css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+  </head>
+
+  <body onload="renderDate()">
+    <header>
+      <div>
+        <h1 class="clockbox">My schedule Planner</h1>
+      </div>
+    </header>
+
+    <p id="timerbox"></p>
+
+    <div class="wrapper">
+      <div class="calendar">
+        <div class="month">
+          <div class="prev" onclick="moveDate('prev')">
+            <span>&#10094;</span>
+          </div>
+          <div>
+            <h2 id="month"></h2>
+            <p id="date_str"></p>
+          </div>
+          <div class="next" onclick="moveDate('next')">
+            <span>&#10095;</span>
+          </div>
+        </div>
+        <div class="weekdays">
+          <div>Sun</div>
+          <div>Mon</div>
+          <div>Tue</div>
+          <div>Wed</div>
+          <div>Thu</div>
+          <div>Fri</div>
+          <div>Sat</div>
+        </div>
+        <div class="days"></div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="heading">My To-do List</div>
+      <div class="todo">
+        <input type="text" placeholder="Add my new task" />
+        <button><i class="fa fa-plus"></i></button>
+      </div>
+
+    <div class="datecont">
+        <p id="content">Select date here first!</p>
+        <input type="date"  id="Date">
+    </div>
+      <ul class="mylist">
+
+      </ul>
+
+      <div class="footing">Number of task pending : <span class = "left">0</span></div>
+    </div>
+    <script src="hicalender.js"></script>
+  </body>
+</html>
